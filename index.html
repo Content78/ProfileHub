@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfileHub - Your Links, One Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        
+        <div id="auth-container">
+            <h2>ProfileHub</h2>
+            <p>All your links. One simple page.</p>
+
+            <div id="login-form">
+                <h3>Log In to Your Account</h3>
+                <input type="email" id="login-email" placeholder="Email Address">
+                
+                <div class="password-wrapper">
+                    <input type="password" id="login-password" placeholder="Password">
+                    <span class="toggle-password" data-target="login-password">Show</span>
+                </div>
+                
+                <button id="login-button">Log In</button>
+                <p class="toggle-link">
+                    Don't have an account? <a href="#" id="show-signup-link">Sign Up</a>
+                </p>
+            </div>
+
+            <div id="signup-form" style="display: none;">
+                <h3>Create Your Free Account</h3>
+                <input type="email" id="signup-email" placeholder="Email Address">
+                
+                <div class="password-wrapper">
+                    <input type="password" id="signup-password" placeholder="Choose a Password">
+                    <span class="toggle-password" data-target="signup-password">Show</span>
+                </div>
+                
+                <button id="signup-button">Create Account</button>
+                <p class="toggle-link">
+                    Already have an account? <a href="#" id="show-login-link">Log In</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="dashboard-container" style="display: none;">
+            <h2>My Dashboard</h2>
+            <button id="logout-button">Log Out</button>
+
+            <div class="card">
+                <h3>Add a New Link</h3>
+                <input type="text" id="link-title" placeholder="Link Title (e.g., 'My YouTube')">
+                <input type="url" id="link-url" placeholder="URL (e.g., 'https://...')">
+                <button id="add-link-button">Add Link</button>
+            </div>
+
+            <div class="card">
+                <h3>My Links</h3>
+                <div id="links-list">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Basic styles for the whole page */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* This is the vibrant gradient you wanted */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the box vertically */
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Main container for the app */
+#app-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* The main white box for auth */
+#auth-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#auth-container h2 {
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#auth-container p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+#auth-container h3 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+/* Style the inputs */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="url"] {
+    width: calc(100% - 24px); /* Full width minus padding */
+    padding: 14px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #667eea; /* Match gradient */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    outline: none;
+}
+
+/* The new vibrant button style */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    /* Button matches the background gradient */
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);
+    transform: translateY(-2px);
+}
+
+/* This is the "Sign Up" link at the bottom */
+.toggle-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #555;
+}
+
+.toggle-link a {
+    color: #667eea; /* Brand color */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* --- Dashboard Styles --- */
+
+#dashboard-container {
+    background-color: #f9faff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+#dashboard-container h2 {
+    text-align: left;
+    margin-top: 0;
+    color: #333;
+}
+
+/* A "card" for dashboard sections */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+#logout-button {
+    background: #e74c3c; /* Red for logout */
+    margin-bottom: 10px;
+}
+
+#links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.link-item span {
+    font-weight: 500;
+    color: #34495e;
+    word-break: break-all;
+}
+
+.link-item button {
+    width: auto;
+    font-size: 13px;
+    padding: 6px 12px;
+    background: #e74c3c; /* Red for delete */
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+/* --- Password Toggle Icon Styles --- */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Make the input inside the wrapper the correct width */
+.password-wrapper input {
+    /* This width matches the other inputs */
+    width: calc(100% - 24px); 
+}
+
+.toggle-password {
+    position: absolute;
+    /* Position it inside the box */
+    right: 12px;
+    top: 15px; /* Adjusts vertical position */
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+    cursor: pointer;
+    user-select: none; /* Prevents selecting the text */
+}
