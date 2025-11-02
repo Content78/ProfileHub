@@ -1,0 +1,94 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Basic styles for the whole page */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* A clean, light background */
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* The main container for the profile */
+.profile-container {
+    width: 100%;
+    max-width: 680px; /* A bit wider for a profile */
+    margin: 0 auto;
+}
+
+/* The user info section */
+#user-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#user-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image a circle */
+    object-fit: cover; /* Ensures the image covers the area */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+
+#user-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+#user-bio {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* The links container */
+#links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between links */
+}
+
+/* Style for each link */
+.link-button {
+    display: block;
+    background-color: #ffffff;
+    padding: 18px 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.link-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* The "Powered by" footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer a {
+    color: #888;
+    font-weight: 600;
+    text-decoration: none;
+}
